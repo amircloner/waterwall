@@ -1,8 +1,8 @@
-# Use an official Alpine Linux runtime as a parent image
-FROM alpine:latest
+# Use an official Ubunru Linux runtime as a parent image
+FROM ubuntu:latest
 
 # Install necessary packages
-RUN apk add --no-cache git bash
+RUN apt-get update -y
 
 # Set the working directory in the container
 WORKDIR /app
