@@ -1,0 +1,31 @@
+{
+    "name": "bgp_server",
+    "nodes": [
+      {
+        "name": "input",
+        "type": "TcpListener",
+        "settings": {
+          "address": "0.0.0.0",
+          "port": 179,
+          "nodelay": true
+        },
+        "next": "bgp_server"
+      },
+      {
+        "name": "bgp_server",
+        "type": "Bgp4Server",
+        "settings": {},
+        "next": "output"
+      },
+  
+      {
+        "name": "output",
+        "type": "TcpConnector",
+        "settings": {
+          "nodelay": true,
+          "address": "127.0.0.1",
+          "port": 443
+        }
+      }
+    ]
+  }

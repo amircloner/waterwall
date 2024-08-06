@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  waterwall:
+    image: waterwall-image
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./config/config.json:/app/config.json
+      - ./config/core.json:/app/core.json
+    network_mode: host
+    # command: ["./waterwall"]
