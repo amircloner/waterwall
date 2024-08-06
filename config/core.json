@@ -19,7 +19,7 @@
     },
     "dns": {},
     "misc": {
-        "workers": 0,
+        "workers": 4,
         "ram-profile": "server",
         "libs-path": "libs/"
     },
